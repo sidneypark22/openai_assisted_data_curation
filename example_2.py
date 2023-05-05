@@ -3,8 +3,6 @@ from dotenv import load_dotenv
 import openai
 import polars as pl
 
-pl.Config.set_fmt_str_lengths(500)
-
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 csv_file_path = './twcs/twcs.csv'
@@ -36,4 +34,4 @@ df = df.with_columns(
     ).alias("new_col_openai")
 )
 
-print(df)
+print(df.select("tweet_id", "created_at", "text", "new_col_openai"))

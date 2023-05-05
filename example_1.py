@@ -34,4 +34,4 @@ df = df.with_columns(
     ).alias("new_col_openai")
 )
 
-print(df)
+print(df.select("tweet_id", "created_at", "text", "new_col_openai"))
