@@ -1,0 +1,4 @@
+polars
+openai
+python-dotenv
+kaggle
