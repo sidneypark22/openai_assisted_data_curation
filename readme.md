@@ -53,3 +53,35 @@ In order to run this, you need to have a Docker installed.
 │ 2        ┆ Tue Oct 31 22:11:45 +0000 2017 ┆ @sprintcare and how do you propo… ┆ @SprintCare    │
 │ 3        ┆ Tue Oct 31 22:08:27 +0000 2017 ┆ @sprintcare I have sent several … ┆ @sprintcare    │
 └──────────┴────────────────────────────────┴───────────────────────────────────┴────────────────┘
+
+
+# Langchain answer questions based on dataframe
+
+Langchain makes it easier to do more exciting things more easily by using OpenAI model.
+
+In this example, I tried creating a dataset with accommodation rooms and their booking status to show availabilities.
+
+The sample dataset created is room_booked_status.csv.
+
+This is in the example_7.py file.
+
+It required fine tuning of dataset including column names, data types and data values and the questions to derive more correct and better answers.
+
+Below are answers provided by the agent powered with OpenAI API for qu
+>>> agent.run("Is there a room available for 6 guests to stay for 2 nights from 28 May 2023 and what is the price in total?")
+'The room is available for 6 guests to stay for 2 nights from 28 May 2023 and the total price is 800.'
+>>> agent.run("Which room is the most popular?")
+'Room 1 is the most popular.'
+>>> agent.run("Which room is the most popular and least popular?")
+'Room 1 is the most popular and Room 3 is the least popular.'
+
+
+# OpenAI Whisper to dictate speech
+
+I asked my son to say anything and record his speech. By using whisper OpenAI model, I was able to convert the speech into textx - surprisingly it captured everything I said quitely next to my son as well.
+
+This is in the example_4.py file.
+
+My idea is to convert the question spoken into text then ask the question to OpenAI via API i.e. ask a question via voice then get an answer.
+
+However, I've reached my API rate limit and I cannot do more demo on this XD

@@ -2,3 +2,9 @@ polars
 openai
 python-dotenv
 kaggle
+sounddevice
+scipy
+langchain
+bs4
+whisper
+pyspark

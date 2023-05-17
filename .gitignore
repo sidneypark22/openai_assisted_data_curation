@@ -2,3 +2,5 @@
 .env
 twcs
 kaggle.json
+tests
+pyannote_whisper
