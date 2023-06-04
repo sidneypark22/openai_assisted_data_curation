@@ -15,7 +15,7 @@ def ask_openai_text_task(question, question_data):
         temperature=0,
         max_tokens=1000,
         top_p=1.0,
-        frequency_penalty=0.0,
+        frequency_penalty=0.0,asdasdas
         presence_penalty=0.0
     )
     response_text = [i for i in response.choices[0].text.split('\n') if i != '']
