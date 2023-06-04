@@ -12,7 +12,7 @@ def ask_openai_text_task(question, question_data):
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=f"""{question}: {question_data}""",
-        temperature=0,
+        temperature=0,hhhhhhwhwhwhwhwh
         max_tokens=1000,
         top_p=1.0,
         frequency_penalty=0.0,
